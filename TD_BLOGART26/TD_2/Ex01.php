@@ -51,7 +51,7 @@
     foreach ($couleurs as $couleur) {
         echo "$couleur<br>";
     }
-    
+
     echo "<h2>Partie 4</h2>";
     echo "<h3>Consigne</h3>";
     echo "<p>Créez un tableau de couleur associatif avec l’instruction array() de la forme :
@@ -61,6 +61,79 @@
     echo "<p> </p>";
 
     echo "<h3>Exercice</h3>";
+    $couleurs_assoc = array(
+        "red" => "Rouge",
+        "green" => "Vert",
+        "blue" => "Bleu",
+        "yellow" => "Jaune",
+        "orange" => "Orange",
+        "pink" => "Rose",
+        "purple" => "Violet",
+        "brown" => "Marron",
+        "black" => "Noir",
+        "gray" => "Gris"
+    );
+    foreach ($couleurs_assoc as $couleurpartie4 => $valeur) {
+        echo "$couleurpartie4 => $valeur<br>";
+    }
+    echo "";
+
+    echo "<h2>Partie 5</h2>";
+    echo "<h3>Consigne</h3>";
+    echo "<p>Afficher les nombres de 1 à 10 en utilisant une boucle while().</p>";
+    echo "<p> </p>";
+
+    echo "<h3>Exercice</h3>";
+    $i = 1;
+    while ($i <= 10) {
+        echo "$i <br>";
+        $i++;
+    }
+
+    echo "<h2>Partie 6</h2>";
+    echo "<h3>Consigne</h3>";
+    echo "<p>Créez un tableau de couleur avec l’instruction array() de la forme : array(“Rouge”, “Vert”, “Bleu”, “Jaune”)...
+    A partir d’une boucle while, parcourez le tableau afin d’afficher le contenu de chaque poste sur le modèle suivant: 
+    La couleur n°1 est Rouge. Attention, l’écriture d’une boucle while est différente d’une boucle for.</p>";
+
+    echo "<p> </p>";
+
+    echo "<h3>Exercice</h3>";
+    $i = 0;
+    while ($i < count($couleurs)) {
+        echo "La couleur n°$i est $couleurs[$i].<br>";
+        $i++;
+    }
+
+    echo "<h2>Partie 7</h2>";
+    echo "<h3>Consigne</h3>";
+    echo "<p>Afficher les nombres de 1 à 10 en utilisant une boucle do… while().</p>";
+
+    echo "<p> </p>";
+
+    echo "<h3>Exercice</h3>";
+    $i = 1;
+    do {
+        echo "$i <br>";
+        $i++;
+    } while ($i <= 10);
+
+
+    echo "<h2>Partie 8</h2>";
+    echo "<h3>Consigne</h3>";
+    echo "<p> Créez un tableau de couleur avec l’instruction array() de la forme : array(“Rouge”, “Vert”, “Bleu”, “Jaune”)...
+    A partir d'une boucle do… while, parcourez le tableau afin d'afficher le contenu de chaque poste sur le modèle suivant : 
+    La couleur n°1 est Rouge. Attention, l'écriture d'une boucle do… while est différente d'une boucle for et while.</p>";
+
+    echo "<p> </p>";
+
+    echo "<h3>Exercice</h3>";
+    $j = 0;
+    do {
+        echo "La couleur n°$j est $couleurs[$j].<br>";
+        $j++;
+    } while ($j < count($couleurs));
+
 
     ?>
 </body>
