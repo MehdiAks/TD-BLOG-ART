@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TD PHP — Mehdi Afankous</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="TD_BLOGART26/assets/style.css">
 </head>
 
 <body>

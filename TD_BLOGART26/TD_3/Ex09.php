@@ -10,26 +10,45 @@
 
 <body>
     <?php
-    echo "<h1>Afankous Mehdi - Exercice 9</h1>";
-    echo "<h2>Consigne :</h2>";
-    echo "<p> En utilisant la fonction random_int(), vous créerez un tableau de 10 cases de valeurs aléatoires 
-    entre 0 et 100. Puis vous indiquerez, en parcourant le tableau, quelle est sa plus petite, 
-    sa plus grande valeur et sa moyenne. </p>";
-    ?>
+    echo "<h1>TD 3 — Tableau aléatoire</h1>";
 
-    <?php
-    echo "<h2>Exercice</h2>";
-    $nombre = array(
-        array("1er nombre", "2eme nombre", "3eme nombre", "4eme nombre",  "5eme nombre", "6eme nombre", "7eme nombre", "8eme nombre", "9eme nombre", "10eme nombre",),
-        array("","","","","","","","","",""),
-    );
-    for ($i = 0; $i < count($nombre); $i++) {
-        $nombre[1][$i] = random_int(1, 100);
+    // Création du tableau
+    $valeurs = [];
+
+    // Remplissage avec des valeurs aléatoires
+    for ($i = 0; $i < 10; $i++) {
+        $valeurs[] = random_int(0, 100);
     }
 
+    // Initialisation
+    $min = $valeurs[0];
+    $max = $valeurs[0];
+    $somme = 0;
+
+    // Parcours du tableau
+    foreach ($valeurs as $valeur) {
+
+        if ($valeur < $min) {
+            $min = $valeur;
+        }
+
+        if ($valeur > $max) {
+            $max = $valeur;
+        }
+
+        $somme += $valeur;
+    }
+
+    // Calcul de la moyenne
+    $moyenne = $somme / count($valeurs);
+
+    // Affichage
+    echo "<p>Valeurs du tableau : " . implode(", ", $valeurs) . "</p>";
+    echo "<p>Valeur minimale : $min</p>";
+    echo "<p>Valeur maximale : $max</p>";
+    echo "<p>Moyenne : " . round($moyenne, 2) . "</p>";
 
     ?>
-
     <?php include "../includes/footer.php"; ?>
 </body>
 

@@ -9,7 +9,10 @@
 </head>
 
 <body>
+    <?php include "../includes/header.php"; ?>
+
     <?php
+    
     echo "<h1>Afankous Mehdi - Exercice 1</h1>";
     echo "<h2>Consigne :</h2>";
     echo "<p> </p>";
