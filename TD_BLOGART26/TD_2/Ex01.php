@@ -133,8 +133,6 @@
         echo "La couleur n°$j est $couleurs[$j].<br>";
         $j++;
     } while ($j < count($couleurs));
-
-
     ?>
 </body>
 
