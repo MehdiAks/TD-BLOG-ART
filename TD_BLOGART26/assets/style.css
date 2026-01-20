@@ -1,161 +1,202 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap');
 
-:root{
-    --bg:#000;
-    --card:#0f0f0f;
-    --text:#eaeaea;
-    --muted:#bdbdbd;
-    --border:rgba(255,255,255,.10);
-    --shadow:0 2px 16px rgba(255,255,255,.06);
+:root {
+    --bg: #000;
+    --card: #0f0f0f;
+    --text: #eaeaea;
+    --muted: #bdbdbd;
+    --border: rgba(255, 255, 255, .10);
+    --shadow: 0 2px 16px rgba(255, 255, 255, .06);
 
-    --btn:#024959;
-    --btnHover:#3CA6A6;
+    --btn: #024959;
+    --btnHover: #3CA6A6;
 
-    --radius:14px;
+    --radius: 14px;
 }
 
-*{ box-sizing:border-box; }
-
-body{
-    margin:0;
-    padding:28px;
-    background:var(--bg);
-    color:var(--text);
-    font-family:"Epilogue", sans-serif;
-    line-height:1.5;
+* {
+    box-sizing: border-box;
 }
 
-.container{
-    max-width:1000px;
-    margin:0 auto;
+body {
+    margin: 0;
+    padding: 28px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Epilogue", sans-serif;
+    line-height: 1.5;
 }
 
-h1,h2,h3{
-    font-family:"Montserrat", sans-serif;
-    margin:0 0 10px 0;
+/* ====== CONTAINER EN BLOCS (TD en 2 colonnes) ====== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-h1{
-    font-size:40px;
-    text-align:center;
+/* HERO en pleine largeur */
+.hero {
+    grid-column: 1 / -1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+    margin: 0;
 }
 
-p{ margin:0 0 12px 0; color:var(--text); }
-
-code{
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.10);
-    padding:2px 6px;
-    border-radius:8px;
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0 0 10px 0;
 }
 
-.hero{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:20px;
-    margin:18px 0 22px;
+h1 {
+    font-size: 40px;
+    text-align: center;
 }
 
-.hero p{
-    color:var(--muted);
-    max-width:850px;
-    margin:8px auto 0;
-    text-align:center;
+p {
+    margin: 0 0 12px 0;
+    color: var(--text);
 }
 
-.hero-buttons{
-    margin-top:14px;
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
+.hero p {
+    color: var(--muted);
+    max-width: 900px;
+    margin: 8px auto 0;
+    text-align: center;
 }
 
-.card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:18px;
-    margin:16px 0;
+.hero-buttons {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.td-head{
-    display:flex;
-    flex-direction:column;
-    gap:6px;
-    margin-bottom:12px;
+code {
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .10);
+    padding: 2px 6px;
+    border-radius: 8px;
 }
 
-.td-summary{
-    color:var(--muted);
-    margin:0;
+/* ====== BLOCS TD ====== */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.exo-list{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin-top:10px;
+.td-head {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
 }
 
-.exo{
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:12px;
-    background:rgba(255,255,255,.02);
+.td-summary {
+    color: var(--muted);
+    margin: 0;
 }
 
-.exo-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-    flex-wrap:wrap;
+/* ====== EXERCICES EN 2 COLONNES ====== */
+.exo-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 10px;
 }
 
-.exo h3{
-    margin:0;
-    font-size:16px;
+/* Une carte exercice */
+.exo {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px;
+    background: rgba(255, 255, 255, .02);
+    display: flex;
+    flex-direction: column;
 }
 
-.exo p{
-    margin:8px 0 0;
-    color:var(--muted);
-    font-size:14px;
+.exo-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-.btn{
-    display:inline-block;
-    padding:10px 14px;
-    border-radius:10px;
-    background:var(--btn);
-    color:#fff;
-    text-decoration:none;
-    border:1px solid transparent;
-    font-size:14px;
-    transition:background .2s ease, transform .1s ease;
+.exo h3 {
+    margin: 0;
+    font-size: 16px;
 }
 
-.btn:hover{
-    background:var(--btnHover);
+.exo p {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ====== BOUTONS ====== */
+.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--btn);
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size: 14px;
+    transition: background .2s ease, transform .1s ease;
+}
+
+.btn:hover {
+    background: var(--btnHover);
     transform: translateY(-1px);
 }
 
-.btn:active{
+.btn:active {
     transform: translateY(0);
 }
 
-.btn-white{
-    background:#fff;
-    color:#000;
-    border:1px solid #fff;
+.btn-white {
+    background: #fff;
+    color: #000;
+    border: 1px solid #fff;
 }
 
-.btn-white:hover{
-    background:#000;
-    color:#fff;
-    border:1px solid #fff;
+.btn-white:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .exo-list {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
 }

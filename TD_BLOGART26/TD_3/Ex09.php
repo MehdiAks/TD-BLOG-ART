@@ -19,8 +19,15 @@
 
     <?php
     echo "<h2>Exercice</h2>";
+    $nombre = array(
+        array("1er nombre", "2eme nombre", "3eme nombre", "4eme nombre",  "5eme nombre", "6eme nombre", "7eme nombre", "8eme nombre", "9eme nombre", "10eme nombre",),
+        array("","","","","","","","","",""),
+    );
+    for ($i = 0; $i < count($nombre); $i++) {
+        $nombre[1][$i] = random_int(1, 100);
+    }
 
-    
+
     ?>
 
     <?php include "../includes/footer.php"; ?>
