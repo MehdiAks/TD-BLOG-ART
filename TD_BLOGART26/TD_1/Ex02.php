@@ -19,6 +19,7 @@
     echo "<p> $helloword </p>";
     echo "<p></p>";
     ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

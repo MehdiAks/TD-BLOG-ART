@@ -19,6 +19,7 @@
     $countcouleur = count($couleurs);
     echo "<p> Le tableau contient $countcouleur valeurs <p>";
     ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

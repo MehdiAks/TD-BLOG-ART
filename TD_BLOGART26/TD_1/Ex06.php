@@ -27,6 +27,7 @@
         echo "<p> $nombre_A est plus grand que $nombre_B</p>";
     }
     ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

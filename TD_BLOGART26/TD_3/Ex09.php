@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afankous Mehdi TD3 - Exercice 1</title>
+    <title>Afankous Mehdi TD3 - Exercice 9</title>
     <link rel="stylesheet" href="../assets/styletd.css">
 </head>
 
 <body>
     <?php
-    echo "<h1>Afankous Mehdi - Exercice 1</h1>";
+    echo "<h1>Afankous Mehdi - Exercice 9</h1>";
     echo "<h2>Consigne :</h2>";
     echo "<p> </p>";
     echo "<h2>Exercice</h2>";

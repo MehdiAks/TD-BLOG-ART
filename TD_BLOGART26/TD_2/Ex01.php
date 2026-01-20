@@ -134,6 +134,7 @@
         $j++;
     } while ($j < count($couleurs));
     ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

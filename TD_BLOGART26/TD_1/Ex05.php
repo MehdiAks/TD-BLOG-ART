@@ -25,6 +25,7 @@
     echo "<p> $typedecimal<p>";
     echo "<p> $typebooleen<p>";
     ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

@@ -54,7 +54,7 @@
     echo "</table>";
 
     ?>
-
+<?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

@@ -39,6 +39,7 @@ for ($i = 0; $i < $taille; $i++) {
 echo "</pre>";
 echo "</div>";
 ?>
+<?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

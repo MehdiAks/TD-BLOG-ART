@@ -20,6 +20,7 @@
     $nom = "Julie La Rousse";
     echo "<p> Bonjour " . $nom . " ! </p>";
     ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 </html>
 

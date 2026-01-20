@@ -70,5 +70,7 @@
         </div>
 
     </div>
+<?php include "TD_BLOGART26/includes/footer.php"; ?>
 </body>
+
 </html>

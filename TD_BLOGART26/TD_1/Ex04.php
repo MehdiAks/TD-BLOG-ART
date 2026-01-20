@@ -21,6 +21,7 @@
     echo "<p> Le type de la variable Bonjour est : $type </p>";
     echo "<p></p>";
     ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

@@ -18,6 +18,7 @@
     define("ANNEE", date("Y"));
     echo "<p>L'année actuelle est : " . ANNEE . "</p>";
     ?>
+    <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>
