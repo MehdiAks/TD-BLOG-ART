@@ -12,12 +12,18 @@
     <?php
     echo "<h1>Afankous Mehdi - Exercice 9</h1>";
     echo "<h2>Consigne :</h2>";
-    echo "<p> </p>";
-    echo "<h2>Exercice</h2>";
+    echo "<p> En utilisant la fonction random_int(), vous créerez un tableau de 10 cases de valeurs aléatoires 
+    entre 0 et 100. Puis vous indiquerez, en parcourant le tableau, quelle est sa plus petite, 
+    sa plus grande valeur et sa moyenne. </p>";
     ?>
 
+    <?php
+    echo "<h2>Exercice</h2>";
 
-<?php include "../includes/footer.php"; ?>
+    
+    ?>
+
+    <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

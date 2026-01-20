@@ -50,7 +50,9 @@ body {
 /* =========================================
    Titres & texte
 ========================================= */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Montserrat", sans-serif;
     margin: 0 0 10px 0;
 }
@@ -164,7 +166,9 @@ label {
     color: var(--muted);
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     width: 100%;
     padding: 10px 12px;
     background: #0b0b0b;
@@ -175,7 +179,9 @@ input, select, textarea {
     font-family: "Epilogue", sans-serif;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     border-color: var(--primary-hover);
 }
 
@@ -190,7 +196,8 @@ table {
     border-radius: 10px;
 }
 
-th, td {
+th,
+td {
     border: 1px solid var(--border);
     padding: 10px;
     text-align: left;
