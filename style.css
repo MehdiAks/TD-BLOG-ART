@@ -1,0 +1,76 @@
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap');
+
+:root{
+    --bg: #000000;
+    --card: #0f0f0f;
+    --text: #eaeaea;
+    --muted: #bdbdbd;
+    --btn: #024959;
+    --btn-hover: #3CA6A6;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 30px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Epilogue", sans-serif;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2{
+    font-family: "Montserrat", sans-serif;
+    margin: 0 0 10px 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 38px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle{
+    text-align: center;
+    color: var(--muted);
+    margin: 0 0 25px 0;
+    font-size: 16px;
+}
+
+.td{
+    background: var(--card);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.links a{
+    display: inline-block;
+    margin: 6px 10px 0 0;
+    padding: 10px 14px;
+    background: var(--btn);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.links a:hover{
+    background: var(--btn-hover);
+    transform: translateY(-1px);
+}
+
+.links a:active{
+    transform: translateY(0);
+}

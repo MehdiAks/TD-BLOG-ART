@@ -1,0 +1,233 @@
+/* =========================================
+   styletd.css (TD_BLOGART26/assets/)
+   Base de styles réutilisables pour les exercices
+========================================= */
+
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap');
+
+:root {
+    /* Couleurs */
+    --bg: #000000;
+    --card: #0f0f0f;
+    --card-2: #141414;
+
+    --text: #eaeaea;
+    --muted: #bdbdbd;
+
+    --primary: #024959;
+    --primary-hover: #3CA6A6;
+
+    --border: rgba(255, 255, 255, 0.10);
+    --shadow: 0 2px 16px rgba(255, 255, 255, 0.06);
+
+    /* Layout */
+    --radius: 14px;
+}
+
+/* Reset léger */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Epilogue", sans-serif;
+    line-height: 1.5;
+}
+
+/* =========================================
+   Conteneur principal
+========================================= */
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   Titres & texte
+========================================= */
+h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0 0 10px 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--muted);
+}
+
+p {
+    margin: 0 0 12px 0;
+    color: var(--text);
+}
+
+.small {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* =========================================
+   Cartes / blocs
+========================================= */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+    margin: 15px 0;
+}
+
+.card-2 {
+    background: var(--card-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin: 15px 0;
+}
+
+/* =========================================
+   Liens / boutons
+========================================= */
+a {
+    color: var(--primary-hover);
+}
+
+a:hover {
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Epilogue", sans-serif;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0px);
+}
+
+/* Petit bouton (utile parfois) */
+.btn-sm {
+    padding: 7px 10px;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+/* =========================================
+   Grille rapide
+========================================= */
+.row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* =========================================
+   Formulaires simples
+========================================= */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: #0b0b0b;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 10px;
+    outline: none;
+    font-family: "Epilogue", sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-hover);
+}
+
+/* =========================================
+   Tables (si tu en fais)
+========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th, td {
+    border: 1px solid var(--border);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    font-family: "Montserrat", sans-serif;
+    background: var(--card-2);
+}
+
+td {
+    background: var(--card);
+}
+
+/* =========================================
+   Code / affichage résultat
+========================================= */
+.codebox {
+    background: #0a0a0a;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* =========================================
+   Petites étiquettes (optionnel)
+========================================= */
+.badge {
+    display: inline-block;
+    background: rgba(60, 166, 166, 0.15);
+    border: 1px solid rgba(60, 166, 166, 0.35);
+    color: var(--primary-hover);
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 13px;
+}
