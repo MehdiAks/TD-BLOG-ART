@@ -11,11 +11,11 @@
 <body>
     <?php
     echo "<h1>Afankous Mehdi - Exercice 2</h1>";
-    echo "<h2> Consigne <h2>";
+    echo "<h2> Consigne </h2>";
     echo "<p> Reprenez le tableau de noms de couleurs de l’exercice 1. En utilisant la fonction count(), 
     affichez combien de valeurs sont contenues dans le tableau (affichez sa taille).</p>";
     echo "<h2>Exercice</h2>";
-    $couleurs = array("Rouge", "Vert", "Bleu", "Jaune", "Orange", "Rose", "Violet", "Marron", "Noir", "Gris");
+    $couleurs = array("Rouge", "Vert", "Bleu", "Jaune", "Orange", "Rose", "Violet", "Marron", "Noir", "Gris","Blanc");
     $countcouleur = count($couleurs);
     echo "<p> Le tableau contient $countcouleur valeurs <p>";
     ?>
