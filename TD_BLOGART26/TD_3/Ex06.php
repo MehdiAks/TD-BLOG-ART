@@ -27,10 +27,17 @@
             echo "<p>$dividende / $diviseur = " . number_format($resultat, 2) . "</p>";
         } catch (Exception $e) {
             echo "<p>Impossible de diviser par zéro.</p>";
+            echo "<p><strong>Erreur :</strong> " . $e->getMessage() . "</p>";
+            echo "<p><strong>Code :</strong> " . $e->getCode() . "</p>";
+            echo "<p><strong>Fichier :</strong> " . $e->getFile() . "</p>";
+            echo "<p><strong>Ligne :</strong> " . $e->getLine() . "</p>";
+        } finally {
+            echo "Fin de la division";
         }
+
     }
 
-    division(12, 13);
+    division(12, 0);
     ?>
 
 
