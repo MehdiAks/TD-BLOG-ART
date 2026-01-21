@@ -11,7 +11,8 @@
         echo "<h1>Afankous Mehdi - Exercice 1</h1>";
         echo "<p>Hello world !</p>";
     ?>
-    <?php include "../includes/footer.php"; ?>
+  
 </body>
 </html>
 
+!
