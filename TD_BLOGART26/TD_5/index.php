@@ -56,73 +56,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h3 class="w3l_head w3l_head1">Personnages</h3><br><br>
 			<div class="w3layouts_gallery_grids">
 				<ul class="w3l_gallery_grid" id="lightGallery">
-					<li data-title="Heroic Fantasy" data-desc="Lorem Ipsum is simply dummy text of the printing."
-						data-src="images/g6.jpg">
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="character.php">
-								<img src="images/g6.jpg" alt=" " class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext">Personnage</h4>
-
+					<ul class="w3l_gallery_grid" id="lightGallery">
+						<?php foreach ($personnages as $id => $personnage): ?>
+							<li data-title="<?= htmlspecialchars($personnage['nom']) ?>"
+								data-src="<?= htmlspecialchars($personnage['url_image']) ?>">
+								<div class="w3layouts_gallery_grid1 box">
+									<a href="character.php?id=<?= $id ?>">
+										<img src="<?= htmlspecialchars($personnage['url_image']) ?>"
+											alt="<?= htmlspecialchars($personnage['nom']) ?>" class="img-responsive" />
+										<div class="overbox">
+											<h4 class="title overtext">
+												<?= htmlspecialchars($personnage['nom']) ?>
+											</h4>
+										</div>
+									</a>
 								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Heroic Fantasy">
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="character.php">
-								<img src="images/g7.jpg" alt="" class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext">Personnage</h4>
-
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Heroic Fantasy">
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="character.php">
-								<img src="images/g2.jpg" alt="" class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext">Personnage</h4>
-
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Heroic Fantasy">
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="character.php">
-								<img src="images/g3.jpg" alt="" class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext">Personnage</h4>
-
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Heroic Fantasy">
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="character.php">
-								<img src="images/g4.jpg" alt="" class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext">Personnage</h4>
-
-								</div>
-							</a>
-						</div>
-					</li>
-					<li data-title="Heroic Fantasy">
-						<div class="w3layouts_gallery_grid1 box">
-							<a href="character.php">
-								<img src="images/g5.jpg" alt="" class="img-responsive" />
-								<div class="overbox">
-									<h4 class="title overtext">Personnage</h4>
-
-								</div>
-							</a>
-						</div>
-					</li>
+							</li>
+						<?php endforeach; ?>
+					</ul>
 				</ul>
 			</div>
 		</div>

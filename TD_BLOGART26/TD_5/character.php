@@ -1,63 +1,50 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+<?php
+// Inclusion des données et du header
+require "datas.php";
+require "includes/header.php";
 
-<!DOCTYPE html>
-<html lang="fr">
+// Récupération de l'id depuis l'URL
+if (isset($_GET['id']) && array_key_exists($_GET['id'], $personnages)) {
+    $id = $_GET['id'];
+} else {
+    $id = 0; // valeur par défaut si id absent ou invalide
+}
 
-<head>
-	<title>Fantasy World</title>
-	<!-- for-mobile-apps -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-			function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- //for-mobile-apps -->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- gallery -->
-	<link rel="stylesheet" href="css/lightGallery.css" type="text/css" media="all" />
-	<!-- //gallery -->
-	<!-- font-awesome icons -->
-	<link href="css/font-awesome.css" rel="stylesheet">
+// Récupération du personnage
+$personnage = $personnages[$id];
+?>
 
-	<!-- //font-awesome icons -->
-	<link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Jura:300,400,500,600" rel="stylesheet">
-	<link
-		href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
-		rel='stylesheet' type='text/css'>
-</head>
+<!-- Contenu principal -->
+<div class="team-bottom">
+    <div class="container">
 
-<body>
-	<!-- header -->
-	<?php require "datas.php"; ?>
-	<?php require "includes/header.php"; ?>
-	<!-- //header -->
+        <h3 class="w3l_head w3l_head1">
+            <?= htmlspecialchars($personnage['nom']) ?>
+        </h3>
+        <br><br>
 
-	<div class="team-bottom">
-		<div class="container">
-			<h3 class="w3l_head w3l_head1">Personnage</h3><br><br>
-			<div class="character-img">
-				<img src="images/g6.jpg" alt=" " class="img-responsive" />
-			</div>
-			<div class="character-text">
-				<h4>Présentation</h4>
-				<p>Description du personnage.</p>
-				<h4>Histoire</h4>
-				<p>Histoire du personnage.</p>
-			</div>
-		</div>
-	</div>
+        <div class="row">
+            <div class="col-md-5">
+                <img src="<?= htmlspecialchars($personnage['url_image']) ?>"
+                     alt="<?= htmlspecialchars($personnage['nom']) ?>"
+                     class="img-responsive">
+            </div>
 
-	<!-- footer -->
-	<?php require "includes/footer.php"; ?>
-	<!-- //footer -->
+            <div class="col-md-7">
+                <p>
+                    <?= htmlspecialchars($personnage['presentation']) ?>
+                </p>
+                <br>
+                <p>
+                    <?= htmlspecialchars($personnage['histoire']) ?>
+                </p>
+            </div>
+        </div>
 
-</body>
+    </div>
+</div>
 
-</html>
+<?php
+// Inclusion du footer
+require "includes/footer.php";
+?>
