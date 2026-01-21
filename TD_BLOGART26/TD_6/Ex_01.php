@@ -12,7 +12,9 @@
     <?php
     echo "<h1>Afankous Mehdi TD6 - Exercice 1</h1>";
     echo "<h2>Consigne :</h2>";
-    echo "<p> </p>";
+    echo "<p>Créez un formulaire qui prend un textarea, 1 liste déroulante pour choisir entre “Majuscule” et “Minuscule” 
+    et qui affiche le message écrit avec toutes les lettres en majuscule ou minuscule selon le choix de l’utilisateur.
+    Vous utiliserez les fonctions strtolower() et strtoupper(), ainsi que $-POST. </p>";
     ?>
 
     <?php
